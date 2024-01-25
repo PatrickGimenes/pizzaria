@@ -4,7 +4,8 @@ interface IProduct {
   slug: String;
   description: String;
   image_link: String;
-  price: Number;
+  //price: number;
+  categoryId: String;
 }
 
 export { IProduct };

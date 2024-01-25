@@ -2,7 +2,7 @@ import { ICategory } from "../interfaces/ICategory";
 
 interface CategoryRepository {
   getAllCategories(): Promise<ICategory[]>;
-  findBySlug(slug: String): Promise<ICategory[] | undefined>;
+  findBySlug(slug: string): Promise<ICategory[] | undefined>;
 }
 
 export { CategoryRepository };

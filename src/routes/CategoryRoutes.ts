@@ -21,7 +21,7 @@ class CategoryRoutes {
       this.categoryController.getAllCategories.bind(this.categoryController)
     );
     this.router.get(
-      "/categories/:slug",
+      "/category/:slug",
       this.categoryController.findBySlug.bind(this.categoryController)
     );
   }

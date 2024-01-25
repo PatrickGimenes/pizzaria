@@ -25,7 +25,7 @@ model Product {
   slug        String
   description String
   image_link  String
-  price       Float
+  price       Decimal
   category    Category @relation(fields: [categoryId], references: [id])
   categoryId  String
 }
