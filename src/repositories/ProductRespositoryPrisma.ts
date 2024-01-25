@@ -18,3 +18,5 @@ class ProductRepositoryPrisma implements ProductRespository {
     return productSlug;
   }
 }
+
+export { ProductRepositoryPrisma };

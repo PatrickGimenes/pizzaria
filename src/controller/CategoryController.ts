@@ -21,7 +21,7 @@ class CategoryController {
       const category = await this.categoryUseCase.findBySlug(slug);
       return res.json(category);
     } catch (error) {
-      console.error("Error in getAllCategories:", error);
+      console.error("Error in findBySlug:", error);
       return res.status(500).json({ error: "Internal Server Error" });
     }
   }

@@ -8,7 +8,7 @@ class CategoryUseCase {
     return this.categoryRepository.getAllCategories();
   }
 
-  findBySlug(slug: String): Promise<ICategory[] | undefined> {
+  findBySlug(slug: string): Promise<ICategory[] | undefined> {
     return this.categoryRepository.findBySlug(slug);
   }
 }
