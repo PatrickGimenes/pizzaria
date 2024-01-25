@@ -20,12 +20,29 @@ model Category {
 }
 
 model Product {
-  id          String   @id @default(uuid())
-  name        String   @unique
+  id          String    @id @default(uuid())
+  name        String    @unique
   slug        String
   description String
   image_link  String
   price       Decimal
-  category    Category @relation(fields: [categoryId], references: [id])
+  category    Category  @relation(fields: [categoryId], references: [id])
   categoryId  String
+  CartItem    CartItem? @relation(fields: [cartItemId], references: [id])
+  cartItemId  String?
+}
+
+model CartItem {
+  id         String    @id @default(uuid())
+  product_id Product[]
+  name       String
+  quantity   Int
+  price      Decimal
+  Cart       Cart?     @relation(fields: [cartId], references: [id])
+  cartId     String?
+}
+
+model Cart {
+  id          String     @id @default(uuid())
+  cartItem_id CartItem[]
 }
