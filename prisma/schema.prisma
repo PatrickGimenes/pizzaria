@@ -35,14 +35,5 @@ model Product {
 model CartItem {
   id         String    @id @default(uuid())
   product_id Product[]
-  name       String
   quantity   Int
-  price      Decimal
-  Cart       Cart?     @relation(fields: [cartId], references: [id])
-  cartId     String?
-}
-
-model Cart {
-  id          String     @id @default(uuid())
-  cartItem_id CartItem[]
 }
